@@ -1,0 +1,108 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap" rel="stylesheet"> 
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css">
+	<link rel="stylesheet" href="{% static 'core/css/estilos.css' %}">
+	<title>Caos News - Noticias 24/7</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+</head>
+
+<body>
+   
+    <div class="contenedor">
+		<main class="contenido-principal">
+			<div class="contenido-principal__contenedor">
+				<div class="contendor2">
+					<a href="#"><img src="{% static 'core/img/Logo.png'%}"  width= 150px height=top alt="Logo"/></a>
+				</div>
+				<nav class="navbar navbar-expand-sm navbar-light bg-light">
+					<a href="{% url 'index'%}" class="navbar-brand">Inicio</a>
+					<button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarMenu">
+						<ul class="navbar-nav">
+							<li class="nav-item">
+								<a href= "{% url 'Periodistas'%}" class="nav-link active">Periodistas</a>
+							</li>
+							</li>
+							<li class="nav-item">
+								<a href="{% url 'IniciarSerion'%}" class=" nav-link active">Iniciar Sesi&oacute;n</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link active" href="{% url 'Contactos'%}">Contactos</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link active" href="{% url 'Registro'%}">Registrarse</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link active" href="{% url 'SubirNoticia'%}">SubirNoticia</a>
+							</li>
+						</ul>
+					</div>					
+				</nav>
+				<div class="input-group">
+					<input type="search" class="form-control rounded" placeholder="Periodistas, Actualidad, Noticias..." aria-label="Buscar" aria-describedby="search-addon"/>
+					<button type="button" class="btn btn-outline-primary">Buscar</button>
+				</div>
+			</div>	
+
+		</main>
+        
+            <div class="Subtitulo">
+                    <h1>Comisión aprobó impuesto a “súper ricos” y grandes empresas, pero sigue en tramitación </h1>
+                    
+                    
+                    
+                    <br>                   
+                    
+            Economia <p><h5>por Sakura Sakura</h5></p> 
+            14.04.2021 / 20:47
+            <div>   <img style="width:600px; height:300px;" src="img/impuesto.jpg">  </div> 
+        
+            La comisión de Constitución de la Cámara de Diputadas y Diputados aprobó el proyecto que busca implementar
+            un impuesto único de un 2,5% a quienes tengan un patrimonio de 22 millones de dólares, así como también aumentar el impuesto de primera categoría a las "mega empresas". 
+        
+            <br>      <br>      
+           
+            Este miércoles se pretendía despachar a la sala de la Cámara de Diputadas y Diputados el
+             proyecto de impuesto a “súper ricos” y grandes empresas tras su aprobación, pero en la 
+             comisión de Constitución fueron presentadas nuevas indicaciones a la iniciativa.
+             <p>Esta acción 
+                fue vista como una forma de dilatar la discusión por parte de quienes promovieron el proyecto,
+                 como la diputada Camila Vallejo (PC), autora de la iniciativa. La moción busca establecer, 
+               en su idea matriz, un impuesto único de un 2,5% a quienes tengan un patrimonio de 22 millones 
+               de dólares. </p> 
+               
+               <p>Sin embargo, durante la tramitación se sumaron nuevas indicaciones, como la
+                eliminación de la exención tributaria y aumentar el impuesto de primera categoría de 27%
+                 a un 30% a las denominadas “mega empresas”.</p>
+    </div>
+
+		<!--Glider-->
+		<script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
+		<!--Fuente-->
+		<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+		<!--JavaScrip-->
+		<script src="{% static 'core/js/app.js'%}"></script>
+		<!--JQuery-->
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+			crossorigin="anonymous"></script>
+		<!--Pooper-->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+			crossorigin="anonymous"></script>
+		<!--Boostrap-->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+			crossorigin="anonymous"></script>
+		<!--Boostrap JS-->
+		<script src="{% static 'core/code.jquery.com/jquery-3.6.0.min.js'%}" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</body>
+
+</html>

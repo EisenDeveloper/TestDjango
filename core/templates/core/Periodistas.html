@@ -1,0 +1,141 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap" rel="stylesheet"> 
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css">
+	<link rel="stylesheet" href="{% static 'core/css/estilos.css' %}">
+	<title>Caos News - Noticias 24/7</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+</head>
+
+<body>
+        <div class="contenedor">
+            <main class="contenido-principal">
+                <div class="contenido-principal__contenedor">
+                    <div class="contendor2">
+                        <a href="#"><img src="{% static 'core/img/Logo.png'%}"  width= 150px height=top alt="Logo"/></a>
+                    </div>
+                    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+                        <a href="{% url 'index'%}" class="navbar-brand">Inicio</a>
+                        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarMenu">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a href= "{% url 'Periodistas'%}" class="nav-link active">Periodistas</a>
+                                </li>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{% url 'IniciarSerion'%}" class=" nav-link active">Iniciar Sesi&oacute;n</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="{% url 'Contactos'%}">Contactos</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="{% url 'Registro'%}">Registrarse</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="{% url 'SubirNoticia'%}">SubirNoticia</a>
+                                </li>
+                            </ul>
+                        </div>					
+                    </nav>
+                    <div class="input-group">
+                        <input type="search" class="form-control rounded" placeholder="Periodistas, Actualidad, Noticias..." aria-label="Buscar" aria-describedby="search-addon"/>
+                        <button type="button" class="btn btn-outline-primary">Buscar</button>
+                    </div>
+                </div>	
+            </main>		
+
+            <div class="NombresPeriodistas">
+                <div class="Subtitulo">
+                    <h1>NUESTROS PERIODISTAS</h1>                  
+                <p><h3>JC Boudouqué</h3></p> 
+                </div>
+            </div>
+
+            <div class="Bodouqué">
+            <div>   <img src="{% static 'core/img/bodoque.jpg'%}">  </div> 
+                <p> Especializado en noticias nacionales. Doctorado en ciencias sociales del instituto 
+                    Aplaplac y ex consejal de Chimbarongo.</p> 
+                <div class="Subtitulo">
+                    <h5>POR EL AUTOR</h5>
+
+                <p><a href="Nacional.html">Recordando la marcha más grande de Chile</a></p>
+                <p><a href="">COVID19: Autoridades esperan inmunidad de rebaño para 2077</a></p>
+                <p><a href="">Gremio de sapos de micro a huelga</a></p>
+                </div> 
+            </div> 
+
+            <div class="PedroCanguro">
+                <p><h3>Pedro Canguro</h3></p>
+                <div>   <img src="{% static 'core/img/roo1.png'%}">  </div> 
+                <p>Apasionado seguidor de todo lo que tenga una pelota. Hincha acérrimo del
+                    Audax Australiano desde 1939.</p> 
+                <div class="Subtitulo">
+                    <h5>POR EL AUTOR</h5>
+
+                    <p><a href="Deporte.html">PSG elimina al Bayern</a></p>
+                    <p><a href="">Colo Colo no descarta sacar del retiro a Carlos Caszely</a></p>
+    
+                <p><a href="">Deportes extremos: ¿Cuál conviene más para el seguro de accidentes?</a></p>
+                </div>
+            </div>
+
+            <div class="JuanaDeBarco">
+            <p><h4>Juana de Barco</h4></p>
+                <div>   <img src="{% static 'core/img/french.jpg'%}">  </div> 
+                Voluntaria de la legión extranjera francesa, experta en geopolitica y cocina vietnamita. 
+
+                <div class="Subtitulo">
+                    <h5>POR LA AUTORA</h5>
+
+                    <p><a href="Internacional.html">Japón comenzará a verter al mar el agua tratada de Fukushima en dos años</a></p>
+                    <p><a href="">Turkmenistán: El Paraiso en la Tierra</a></p>
+                    <p><a href="">Nuevo Canciller alemán, Andorf Hilster, niega acusaciones de racismo </a></p>
+                </div>
+            </div>
+
+            <div class="Sakura">
+                <p><h4>Sakura Sakura</h4></p>
+                <div>   <img src="{% static 'core/img/cara.jpg'%}">  </div> 
+                Economista de la Universidad de Tokio, corredora de bolsa y 100 metros planos. 
+
+                <div class="Subtitulo">
+                    <h5>POR LA AUTORA</h5>
+
+                    <p><a href="Economia.html">Comisión aprobó impuesto a “súper ricos” y grandes empresas, pero sigue en tramitación</a></p>
+                    <p><a href="">Ministro de economía y alza en el precio de los anteojos: "No lo vimos venir" </a></p>
+           
+                <p><a href="">Proponen 4°, 5° y 6° retiro del 10% de los fondos de AFP</a></p>
+                </div>
+            </div>  
+
+
+	<!--Glider-->
+	<script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
+	<!--Fuente-->
+	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+	<!--JavaScrip-->
+	<script src="{% static 'core/js/app.js'%}"></script>
+	<!--JQuery-->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+	<!--Pooper-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <!--Boostrap-->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+	<!--Boostrap JS-->
+	<script src="{% static 'core/code.jquery.com/jquery-3.6.0.min.js'%}" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>            
+
+</body>
+</html>
