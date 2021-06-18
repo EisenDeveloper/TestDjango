@@ -33,8 +33,8 @@ class  Periodistas(models.Model):
     ap_Paterno = models.CharField(max_length=15,verbose_name='Apellido Paterno',null = True)
     ap_Materno = models.CharField(max_length=15,verbose_name='Apellido Materno',null = True)
     edad_Periodista = models.IntegerField(verbose_name='Edad Periodista', null=False)
-    idCategoria = models.ForeignKey(verbose_name='Id Categoria',null = True)
+    idCategoria = models.IntegerField(verbose_name='Id Categoria',null = True)
     fecha = models.DateField(verbose_name='fecha',null = True)
     imagen = models.ImageField(null=True,blank=True,verbose_name='imagen')
     def __str__(self):   
-        return self.id_Periodista
+        return self.idPeriodista
