@@ -10,7 +10,7 @@ class  Usuarios(models.Model):
     correo = models.EmailField(max_length=50,verbose_name='Email',null = True)
     genero = models.CharField(max_length=9,verbose_name='genero',null = True)
     edad = models.IntegerField(verbose_name='Edad',null = True)
-    proofesion_Periodista = models.BooleanField(verbose_name='prof_periodista',null = False)
+    profesion_Periodista = models.BooleanField(verbose_name='prof_periodista',null = False)
     def __str__(self):
         return self.id
 
