@@ -13,55 +13,52 @@
 
 <body>
 
-        <div class="contenedor">
-            <main class="contenido-principal">
-                <div class="contenido-principal__contenedor">
-                    <div class="contendor2">
-                        <a href="#"><img src="{% static 'core/img/Logo.png'%}"  width= 150px height=top alt="Logo"/></a>
-                    </div>
-                    <nav class="navbar navbar-expand-sm navbar-light bg-light">
-                        <a href="{% url 'index'%}" class="navbar-brand">Inicio</a>
-                        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarMenu">
-                            <ul class="navbar-nav">
-                                <li class="nav-item">
-                                    <a href= "{% url 'Periodistas'%}" class="nav-link active">Periodistas</a>
-                                </li>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="{% url 'IniciarSerion'%}" class=" nav-link active">Iniciar Sesi&oacute;n</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link active" href="{% url 'Contactos'%}">Contactos</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link active" href="{% url 'Registro'%}">Registrarse</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link active" href="{% url 'SubirNoticia'%}">SubirNoticia</a>
-                                </li>
-                            </ul>
-                        </div>					
-                    </nav>
-                    <div class="input-group">
-                        <input type="search" class="form-control rounded" placeholder="Periodistas, Actualidad, Noticias..." aria-label="Buscar" aria-describedby="search-addon"/>
-                        <button type="button" class="btn btn-outline-primary">Buscar</button>
-                    </div>
-                </div>	
-            </main>  
-        </div>
+    <div class="contenedor">
+        <main class="contenido-principal">
+            <div class="contenido-principal__contenedor">
+                <div class="contendor2">
+                    <a href="#"><img src="{% static 'core/img/Logo.png'%}"  width= 150px height=top alt="Logo"/></a>
+                </div>
+                <nav class="navbar navbar-expand-sm navbar-light bg-light">
+                   <a href="{% url 'index'%}" class="navbar-brand">Inicio</a>
+                    <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarMenu">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a href= "{% url 'Periodistas'%}" class="nav-link active">Periodistas</a>
+                            </li>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{% url 'IniciarSerion'%}" class=" nav-link active">Iniciar Sesi&oacute;n</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="{% url 'Contactos'%}">Contactos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="{% url 'Registro'%}">Registrarse</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="{% url 'SubirNoticia'%}">SubirNoticia</a>
+                            </li>
+                        </ul>
+                    </div>					
+                </nav>
 
-        <div>
-    
+                <div class="input-group">
+                    <input type="search" class="form-control rounded" placeholder="Periodistas, Actualidad, Noticias..." aria-label="Buscar" aria-describedby="search-addon"/>
+                    <button type="button" class="btn btn-outline-primary">Buscar</button>
+                </div>
+            </div>	
+        </main>     
         <div class="row">
             <form method="post" action="" id = "formulario">
                 {% csrf_token %}
                 <div class="form-group">
-                    {{form.as_table}}       
-                </div>
-    
+                    {{form.as_table}}        
+            </div>
+        
                 <input type="submit" class = "btn btn-danger" id = "enviar" value = "Enviar">
                 <input type="reset" class="btn btn-primary" id = "limpiar" value = "Limpiar">
                 <div id = error class = "alert alert-danger" role = "alert"></div>
@@ -71,20 +68,20 @@
             </form>     
         </div> 
 
-    <div>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-    </div>
+        <div>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+        </div>
     
-    <script>
-        function isEmail(email) {
-            var expRex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-            var esValido = expRex.test(email)
-            if(esValido == false){
-                alert('El correo electronico no es válido')
+        <script>
+            function isEmail(email) {
+                var expRex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                var esValido = expRex.test(email)
+                if(esValido == false){
+                    alert('El correo electronico no es válido')
+                }
             }
-        }
-    </script>
+        </script>
     
 
 
@@ -107,4 +104,5 @@
 	<script src="{% static 'core/code.jquery.com/jquery-3.6.0.min.js'%}" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
 </body>
+
 </html>
