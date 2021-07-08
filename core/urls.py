@@ -38,5 +38,5 @@ urlpatterns=[
 
     path('ModificarNoticias/<id>',Mod_Noticias,name="ModificarNoticias"),
 
-    path('listar_noticias_modificar/',form_list_noticia_mod,name="form_list_noticia_mod"),
+    path('form_list_noticia_mod/',form_list_noticia_mod,name="form_list_noticia_mod"),
 ]

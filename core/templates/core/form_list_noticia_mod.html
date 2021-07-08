@@ -43,7 +43,7 @@
                                 <a class="nav-link active" href="{% url 'Noticias'%}">Noticias</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" href="{% url 'listar_noticias_modificar'%}">Modificar Noticias</a>
+                                <a class="nav-link active" href="{% url 'form_list_noticia_mod'%}">Modificar Noticias</a>
                             </li>
                         </ul>
                     </div>					
@@ -55,3 +55,25 @@
                 </div>
             </div>
 
+            <h1>Noticias</h1>
+
+            <div class="row">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope = "col"><th>Noticia</th><th scope = "col">Titulo</th><th scope = "col">descripcion</th><th scope = "col">fecha</th><th scope = "col">id</th><th scope = "col">id_noticia</th><th scope = "col">Opciones</th>
+                        </tr>
+                    </thead>
+    
+    
+                    <thead>
+                        <tbody>
+                        {% for ve in noticia %} 
+                        <tr><td>{{ve.imagen}}</td><td>{{ve.titulo}}</td><td>{{ve.descripcion}}</td><td>{{ve.fecha}}</td><td>{{ve.id}}</td><td>{{ve.id_noticia}}</td>           
+                            <td><a href ="{% url 'ModificarNoticias' ve.id_noticia %}">Modificar</a></td>
+                            <td><a href ="{% url 'form_del_pintura' ve.id_pintura %}">Eliminar</a></td>
+                        </tr>   
+                        {% endfor %} 
+                    </thead>
+                        </tbody>
+                </table> 
