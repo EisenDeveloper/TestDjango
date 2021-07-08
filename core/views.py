@@ -84,3 +84,10 @@ def Mod_Noticias(request, id):
             formulario.save()
             datos['mensaje'] = "Modificado correctamente"
     return render(request,'core/ModificarNoticias.html', datos)
+
+def form_list_noticia_mod(request):   
+    noticia = Noticia.objects.all()
+    datos = {
+        'noticia': noticia
+    }
+    return render(request,'core/listar_noticias_modificar.html',datos)
