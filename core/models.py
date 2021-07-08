@@ -12,20 +12,20 @@ class  Usuarios(models.Model):
     edad = models.IntegerField(verbose_name='Edad',null = True)
     profesion_Periodista = models.BooleanField(verbose_name='prof_periodista',null = False)
     def __str__(self):
-        return self.id
+        return self.nombre
 
 class  Contacto(models.Model):
     email       = models.EmailField(primary_key=True,verbose_name='email',null = True)
     titulo      = models.CharField(max_length=128,verbose_name='Titulo',null = True)
     descripcion = models.CharField(max_length=500,verbose_name='descripcion',null = True)       
     def __str__(self):   
-        return self.email
+        return self.titulo
 
 class Categoria(models.Model):
     idCategoria=models.IntegerField(primary_key=True,verbose_name='Id Categoria',null = True)
     tipoCategoria = models.CharField(max_length=60,verbose_name='tipocategoria',null = True)
     def __str__(self):   
-        return self.idCategoria
+        return self.tipoCategoria
 
 class  Periodistas(models.Model):
     idPeriodista = models.IntegerField(primary_key=True,verbose_name='Id Periodista',null = True)
@@ -37,4 +37,4 @@ class  Periodistas(models.Model):
     fecha = models.DateField(verbose_name='fecha',null = True)
     imagen = models.ImageField(null=True,blank=True,verbose_name='imagen')
     def __str__(self):   
-        return self.idPeriodista
+        return self.nombre
