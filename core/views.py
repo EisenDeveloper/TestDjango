@@ -74,3 +74,13 @@ def Noticias(request):
         'noticias': noticias
     }
     return render(request,'core/Noticias.html',datos)
+
+def Mod_Noticias(request, id):
+    noticia = Noticia.objects.get(id_noticia = id)
+    datos ={ 'form' : NoticiaForm(instance= noticia)}
+    if request.method == 'POST':
+        formulario = NoticiaForm(data=request.POST,instance= noticia)
+        if formulario.is_valid:
+            formulario.save()
+            datos['mensaje'] = "Modificado correctamente"
+    return render(request,'core/ModificarNoticias.html', datos)
