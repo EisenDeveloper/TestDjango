@@ -91,3 +91,8 @@ def form_list_noticia_mod(request):
         'noticia': noticia
     }
     return render(request,'core/form_list_noticia_mod.html',datos)
+
+def form_noticia_eliminar(redirect, id):   
+    noticia = Noticia.objects.get(id_noticia=id)
+    noticia.delete()
+    return redirect(to="form_list_noticia_mod")

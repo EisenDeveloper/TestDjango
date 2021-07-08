@@ -12,6 +12,7 @@ from .views import SubirNoticia
 from .views import Noticias
 from .views import Mod_Noticias
 from .views import form_list_noticia_mod
+from .views import form_noticia_eliminar
 
 urlpatterns=[
     path('',index,name="index"),
@@ -39,4 +40,6 @@ urlpatterns=[
     path('ModificarNoticias/<id>',Mod_Noticias,name="ModificarNoticias"),
 
     path('form_list_noticia_mod/',form_list_noticia_mod,name="form_list_noticia_mod"),
+
+    path('form_noticia_eliminar/<id>',form_noticia_eliminar,name="form_noticia_eliminar"),
 ]
