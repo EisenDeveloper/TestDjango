@@ -15,4 +15,4 @@ class ContactoForm(ModelForm):
 class UsuariosForm(ModelForm):
     class Meta:
         model = Usuarios
-        fields = ['nombre','correo','sexo','edad','artista','id']   
+        fields = ['nombre','correo','genero','edad','id']   

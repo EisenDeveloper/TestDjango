@@ -66,3 +66,6 @@ def SubirNoticia(request):
             datos['mensaje'] = "Guardado correctamente" 
 
     return render(request,'core/SubirNoticia.html')
+
+def Noticias(request):
+    return render(request,'core/Noticias.html')

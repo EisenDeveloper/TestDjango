@@ -9,6 +9,7 @@ from .views import Nacional
 from .views import Periodistas
 from .views import Registro
 from .views import SubirNoticia
+from .views import Noticias
 
 urlpatterns=[
     path('',index,name="index"),
@@ -31,4 +32,5 @@ urlpatterns=[
     
     path('SubirNoticia/',SubirNoticia,name="SubirNoticia"),
     
+    path('Noticias/',Noticias,name="Noticias"),
 ]
