@@ -1,10 +1,24 @@
 from django.shortcuts import render
+from .models import Periodistas
 
 # Create your views here.
+
 def index(request):
+
     return render(request,'core/index.html')
 
 def Contactos(request):
+
+    datos ={'form' :ContactoForm}
+    
+    if request.method=='POST':
+        
+        formulario = ContactoForm(request.POST)
+        
+        if formulario.is_valid:
+            formulario.save()
+            datos['mensaje'] = "Guardado correctamente" 
+
     return render(request,'core/Contactos.html')
 
 def Deporte(request):

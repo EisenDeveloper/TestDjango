@@ -16,7 +16,7 @@ class  Usuarios(models.Model):
 
 class  Contacto(models.Model):
     email       = models.EmailField(primary_key=True,verbose_name='email',null = True)
-    titulo      = models.CharField(max_length=128,verbose_name='Titulo',null = True)
+    titulo      = models.CharField(max_length=128,verbose_name='titulo',null = True)
     descripcion = models.CharField(max_length=500,verbose_name='descripcion',null = True)       
     def __str__(self):   
         return self.titulo
@@ -38,3 +38,13 @@ class  Periodistas(models.Model):
     imagen = models.ImageField(null=True,blank=True,verbose_name='imagen')
     def __str__(self):   
         return self.nombre
+
+class  Noticia(models.Model):
+    id_noticia = models.IntegerField(primary_key=True,verbose_name='Id Pintura',null = True)
+    titulo = models.CharField(max_length=200,verbose_name='titulo',null = True)
+    idPeriodista = models.ForeignKey(Periodistas,on_delete=models.CASCADE,verbose_name='Id',null = True)
+    descripcion = models.CharField(max_length=500,verbose_name='descripcion',null = True)
+    fecha = models.DateField(verbose_name='fecha',null = True)
+    imagen = models.ImageField(null=True,blank=True,verbose_name='imagen')
+    def __str__(self):   
+        return self.titulo
