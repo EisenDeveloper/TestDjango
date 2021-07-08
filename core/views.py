@@ -1,16 +1,8 @@
 from django.shortcuts import render
-from .models import Periodistas
 
 # Create your views here.
 def index(request):
-
-    periodistas= Periodistas.objects.all()
-
-    datos= {
-        'periodistas': periodistas
-    }
-
-    return render(request,'core/index.html',datos)
+    return render(request,'core/index.html')
 
 def Contactos(request):
     return render(request,'core/Contactos.html')
