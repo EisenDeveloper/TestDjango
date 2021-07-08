@@ -19,7 +19,7 @@ def Contactos(request):
             formulario.save()
             datos['mensaje'] = "Guardado correctamente" 
 
-    return render(request,'core/Contactos.html')
+    return render(request,'core/Contactos.html',datos)
 
 def Deporte(request):
     return render(request,'core/Deporte.html')
@@ -65,7 +65,7 @@ def SubirNoticia(request):
             formulario.save()
             datos['mensaje'] = "Guardado correctamente" 
 
-    return render(request,'core/SubirNoticia.html')
+    return render(request,'core/SubirNoticia.html',datos)
 
 def Noticias(request):
     return render(request,'core/Noticias.html')
