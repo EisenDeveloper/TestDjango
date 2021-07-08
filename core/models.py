@@ -40,9 +40,8 @@ class  Periodistas(models.Model):
         return self.nombre
 
 class  Noticia(models.Model):
-    id_noticia = models.IntegerField(primary_key=True,verbose_name='Id Pintura',null = True)
+    id_noticia = models.IntegerField(primary_key=True,verbose_name='Id Noticia',null = True)
     titulo = models.CharField(max_length=200,verbose_name='titulo',null = True)
-    idPeriodista = models.ForeignKey(Periodistas,on_delete=models.CASCADE,verbose_name='Id',null = True)
     descripcion = models.CharField(max_length=500,verbose_name='descripcion',null = True)
     fecha = models.DateField(verbose_name='fecha',null = True)
     imagen = models.ImageField(null=True,blank=True,verbose_name='imagen')
