@@ -80,7 +80,7 @@
                                     <a class="nav-link active" href="{% url 'Noticias'%}">Noticias</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link active" href="{% url 'ModificarNoticias'%}">Modificar Noticias</a>
+                                    <a class="nav-link active" href="{% url 'listar_noticias_modificar'%}">Modificar Noticias</a>
                                 </li>
                             </ul>
                         </div>					
@@ -115,7 +115,7 @@
                         <tbody>
                         {% for ve in noticia %} 
                         <tr><td>{{ve.imagen}}</td><td>{{ve.titulo}}</td><td>{{ve.descripcion}}</td><td>{{ve.categoria}}</td><td>{{ve.fecha}}</td><td>{{ve.id}}</td><td>{{ve.id_pintura}}</td>           
-                            <td><a href ="{% url 'ModificarNoticias' ve.id_noticia %}">Modificar</a></td>
+                            <td><a href ="{% url 'listar_noticias_modificar' ve.id_noticia %}">Modificar</a></td>
                         </tr>   
                         {% endfor %} 
                     </thead>
