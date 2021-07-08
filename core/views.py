@@ -1,3 +1,4 @@
+from core.models import Noticia
 from django.shortcuts import render
 from .forms import ContactoForm,UsuariosForm,NoticiaForm
 
@@ -68,4 +69,8 @@ def SubirNoticia(request):
     return render(request,'core/SubirNoticia.html',datos)
 
 def Noticias(request):
-    return render(request,'core/Noticias.html')
+    noticias = Noticia.objects.all()
+    datos = {
+        'noticias': noticias
+    }
+    return render(request,'core/Noticias.html',datos)
