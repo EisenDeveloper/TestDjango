@@ -92,7 +92,7 @@
             {% for n in noticias %}  
             <div class="responsive">
                 <div class="gallery">
-                    <a  href="{% url 'Noticias' %}" class=""><img src= {{n.Nacional.jpg}} width="300" height="200"></a>
+                    <a  href="{% url 'Noticias' %}" class=""><img src={{n.imagen.url}} width="300" height="200"></a>
                     <div class="des">{{n.descripcion}}</div>    
                 </div>
             </div>
