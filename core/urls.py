@@ -10,6 +10,7 @@ from .views import Periodistas
 from .views import Registro
 from .views import SubirNoticia
 from .views import Noticias
+from .views import Mod_Noticias
 
 urlpatterns=[
     path('',index,name="index"),
@@ -33,4 +34,6 @@ urlpatterns=[
     path('SubirNoticia/',SubirNoticia,name="SubirNoticia"),
     
     path('Noticias/',Noticias,name="Noticias"),
+
+    path('ModificarNoticias/',Mod_Noticias,name="ModificarNoticias"),
 ]

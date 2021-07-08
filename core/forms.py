@@ -5,7 +5,7 @@ from .models import Noticia,Contacto,Usuarios
 class NoticiaForm(ModelForm):
     class Meta:
         model = Noticia
-        fields = ['titulo','descripcion','imagen','id_noticia']
+        fields = ['id_noticia','titulo','descripcion','imagen']
 
 class ContactoForm(ModelForm):
     class Meta:

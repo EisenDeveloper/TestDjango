@@ -40,7 +40,7 @@ class  Periodistas(models.Model):
         return self.nombre
 
 class  Noticia(models.Model):
-    id_noticia = models.IntegerField(primary_key=True,verbose_name='Id Noticia',null = True)
+    id_noticia = models.IntegerField(primary_key=True,verbose_name='id_noticia',null = True)
     titulo = models.CharField(max_length=200,verbose_name='titulo',null = True)
     descripcion = models.CharField(max_length=500,verbose_name='descripcion',null = True)
     fecha = models.DateField(verbose_name='fecha',null = True)
