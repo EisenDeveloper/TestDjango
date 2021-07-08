@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Periodistas
+from .forms import ContactoForm,UsuariosForm,NoticiaForm
 
 # Create your views here.
 
@@ -40,7 +40,29 @@ def Periodistas(request):
     return render(request,'core/Periodistas.html')
 
 def Registro(request):
-    return render(request,'core/Registro.html')
+
+    datos ={'form' :UsuariosForm}
+    
+    if request.method=='POST':
+        
+        formulario = UsuariosForm(request.POST)
+        
+        if formulario.is_valid:
+            formulario.save()
+            datos['mensaje'] = "Guardado correctamente"
+
+    return render(request,'core/Registro.html',datos)
 
 def SubirNoticia(request):
+
+    datos ={'form' :NoticiaForm}
+    
+    if request.method=='POST':
+        
+        formulario = NoticiaForm(request.POST)
+        
+        if formulario.is_valid:
+            formulario.save()
+            datos['mensaje'] = "Guardado correctamente" 
+
     return render(request,'core/SubirNoticia.html')

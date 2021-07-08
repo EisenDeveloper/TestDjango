@@ -50,27 +50,23 @@
             </div>	
         </main>
 
-    <div class="noticia-box">
-        <form action="procesar.php" method="GET" enctype="multipart/form-data" name="enviarnoticia">
-            <div class="nombre-noticia">
-                <label for="nombre-noticia">Nombre Noticia: </label>
-                <input name="nombre-noticia" type="text" value="" placeholder="Ingrese nombre de la noticia" size="100">
+        <div class="row">
+            <form method="post" action="" id = "formulario">
+            {% csrf_token %}
+            <div class="form-group">
+            {{form.as_table}}        
             </div>
-            <div class="fecha-noticia">
-                <label for="fecha-obra">Fecha de creación: </label>
-                <input type="date" name="fecha-noticia" min="1900" placeholder="Fecha creación de la noticia">
-            </div>
-            <div class="subir-noticia">
-                <input type="hidden" name="subir_noticia" value="4194304" />
-                <input type="file" />
-            </div>
-            <div class="descripcion">
-                <textarea name="comentarios" rows="10" cols="100"> Ingrese una descripción de la Noticia</textarea>
-            </div>
-            <p>
-                <input type="submit" value="Enviar">
-                <input type="reset" value="Limpiar">
-            </p>
+    
+            <input type="submit" class = "btn btn-danger" id = "enviar" value = "Enviar">
+            <input type="reset" class="btn btn-primary" id = "limpiar" value = "Limpiar">
+            <div id = error class = "alert alert-danger" role = "alert"></div>
+            <div class="row"></div>
+                <div class = "alert alert-success" role="alert">
+                    {{alert}}
+                </div>
+        </div>
+
+
         </form>
     </div>
 

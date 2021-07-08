@@ -52,42 +52,21 @@
                 </div>	
             </main>
 
-        <div class="register-box">
-            <h1>Ingrese aqu&iacute;
-            </h1>
-            <form action="procesar.php" method="POST" enctype="multipart/form-data" name="registro">
-            <div class="nombre-registro">
-                <label for="nombre">Nombre: </label>
-                <input name="nombre" type="text" value="" placeholder="Ingrese su nombre" autocomplete="on" required>
-            </div>
-            <div class="email">
-                <label for="email">Email: </label>
-                <input name="email" type="text" value="" placeholder="nombre@email.com" autocomplete="on" required>
-            </div>
-            <div class="pass-registro">
-                <label for="contraseña">Contraseña: </label>
-                <input name="contraseña" type="password" value="" placeholder="Ingrese una contraseña" size="30" autocomplete="on" required>
-            </div>
-            <div class="pass-confirm">
-                <label for="contraseña">Confirme su contraseña: </label>
-                <input name="contraseña-confirm" type="password" value="" placeholder="Ingrese denuevo la contraseña" size="30" autocomplete="on" required>
-            </div>
-            <div class="sexo">
-                <label for="sexo">Sexo: </label>
-                <input type="radio" name="hm" value="h" required> Hombre
-                <input type="radio" name="hm" value="m" required> Mujer
-            </div>
-            <div class="fecha-nac">
-                <label for="fecha.nac">Año de nacimiento: </label>
-                <input type="date" name="nacido" min="1900" placeholder="Año de nacimiento" required>
-            </div>
-            
-            <p>
+            <div class="row">
+                <form method="post" action="" id = "formulario">
+                  {% csrf_token %}
+                  <div class="form-group">
+                      {{form.as_table}}        
+                  </div>
+          
+                  <input type="submit" class = "btn btn-danger" id = "enviar" value = "Enviar">
+                  <input type="reset" class="btn btn-primary" id = "limpiar" value = "Limpiar">
+                  <div id = error class = "alert alert-danger" role = "alert"></div>
+                  <div class = "alert alert-success" role="alert">
+                    {{alert}}
+                  </div>
                 
-                <input type="submit" value="Registro">
-                <input type="reset" value="Borrar">
-            </p>
-            </form>
+                </form>
         </div>
 
 

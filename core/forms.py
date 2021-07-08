@@ -1,11 +1,11 @@
 from django import forms
 from django.forms import ModelForm
-from .models import Pintura,Contacto,Usuarios
+from .models import Noticia,Contacto,Usuarios
 
-class PinturaForm(ModelForm):
+class NoticiaForm(ModelForm):
     class Meta:
-        model = Pintura
-        fields = ['titulo','descripcion','categoria','imagen','id_pintura','id']
+        model = Noticia
+        fields = ['titulo','descripcion','imagen','id_noticia','idPeriodista']
 
 class ContactoForm(ModelForm):
     class Meta:

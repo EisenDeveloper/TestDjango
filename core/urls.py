@@ -30,4 +30,5 @@ urlpatterns=[
     path('Registro/',Registro,name="Registro"),
     
     path('SubirNoticia/',SubirNoticia,name="SubirNoticia"),
+    
 ]
