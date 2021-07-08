@@ -90,4 +90,4 @@ def form_list_noticia_mod(request):
     datos = {
         'noticia': noticia
     }
-    return render(request,'core/listar_noticias_modificar.html',datos)
+    return render(request,'core/form_list_noticia_mod.html',datos)

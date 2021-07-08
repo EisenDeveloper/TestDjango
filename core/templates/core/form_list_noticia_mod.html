@@ -71,7 +71,6 @@
                         {% for ve in noticia %} 
                         <tr><td>{{ve.imagen}}</td><td>{{ve.titulo}}</td><td>{{ve.descripcion}}</td><td>{{ve.fecha}}</td><td>{{ve.id}}</td><td>{{ve.id_noticia}}</td>           
                             <td><a href ="{% url 'ModificarNoticias' ve.id_noticia %}">Modificar</a></td>
-                            <td><a href ="{% url 'form_del_pintura' ve.id_pintura %}">Eliminar</a></td>
                         </tr>   
                         {% endfor %} 
                     </thead>
